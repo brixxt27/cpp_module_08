@@ -1,8 +1,9 @@
-NAME	=	start_with_a_few_functions
+NAME	=	span
 
 SRCS	=	main.cpp
+			Span.cpp
 
 INCS	=	\
-			whatever.h
+			Span.h
 
 include ../template.mk
