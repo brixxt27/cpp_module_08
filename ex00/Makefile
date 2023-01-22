@@ -1,8 +1,8 @@
-NAME	=	start_with_a_few_functions
+NAME	=	easy_find
 
 SRCS	=	main.cpp
 
 INCS	=	\
-			whatever.h
+			easyfind.h
 
 include ../template.mk
