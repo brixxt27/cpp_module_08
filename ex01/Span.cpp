@@ -31,6 +31,8 @@ void	Span::addNumber(unsigned int num)
 {
 	if (mVector.size() >= mSize)
 		throw std::out_of_range("**** Span is full! ****");
+	
+	mIsSorted = false;
 
 	mVector.push_back(num);
 }
@@ -43,6 +45,8 @@ void	Span::addNumber(unsigned int smallest_num, unsigned int bigest_num)
 		throw std::out_of_range("**** Span is full! ****");
 	if (span < 1)
 		throw std::range_error("**** You need 2 or more elements ****");
+
+	mIsSorted = false;
 
 	mVector.reserve(10000);
 

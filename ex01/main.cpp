@@ -72,6 +72,23 @@ int	main()
 	catch (std::exception& e) {
 		std::cout << e.what() << std::endl;
 	}
+	std::cout << "---------------------test----------------------" << std::endl;
+	try {
+		Span	sp(10000);
+
+		sp.addNumber(42, 1041);
+
+		std::cout << sp.shortestSpan() << std::endl;
+		std::cout << sp.longestSpan() << std::endl;
+
+		sp.addNumber(4);
+
+		std::cout << sp.shortestSpan() << std::endl;
+		std::cout << sp.longestSpan() << std::endl;
+	}
+	catch (std::exception& e) {
+		std::cout << e.what() << std::endl;
+	}
 	std::cout << "---------------------------------------------" << std::endl;
 	return 0;
 }
