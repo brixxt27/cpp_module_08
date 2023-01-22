@@ -39,7 +39,7 @@ void	Span::addNumber(unsigned int smallest_num, unsigned int bigest_num)
 {
 	unsigned int	span = bigest_num - smallest_num;
 
-	if (mVector.size() + span > mSize)
+	if (mVector.size() + span + 1 > mSize)
 		throw std::out_of_range("**** Span is full! ****");
 	if (span < 1)
 		throw std::range_error("**** You need 2 or more elements ****");
@@ -47,8 +47,6 @@ void	Span::addNumber(unsigned int smallest_num, unsigned int bigest_num)
 	mVector.reserve(10000);
 
 	for (unsigned int i = smallest_num; i <= bigest_num; i++) {
-		if (mVector.size() >= mSize)
-			throw std::out_of_range("**** Span is full! ****");
 		mVector.push_back(i);
 	}
 }
