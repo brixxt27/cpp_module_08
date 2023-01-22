@@ -11,12 +11,15 @@ public:
 	Span&	operator=(const Span& rhs);
 	virtual ~Span();
 
-	//addNumber()
-	//shortestSpan()
-	//longestSpan()
+	void			addNumber(unsigned int num);
+	void			addNumber(unsigned int smallest_num, unsigned int bigest_num);
+	unsigned int	shortestSpan();
+	unsigned int	longestSpan();
+
 private:
 	std::vector<int>	mVector;
 	unsigned int		mSize;
+	bool				mIsSorted;
 
 	Span();
 };
