@@ -11,6 +11,9 @@ public:
 	Span&	operator=(const Span& rhs);
 	virtual ~Span();
 
+	//addNumber()
+	//shortestSpan()
+	//longestSpan()
 private:
 	std::vector<int>	mVector;
 	unsigned int		mSize;
