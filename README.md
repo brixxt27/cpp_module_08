@@ -80,4 +80,45 @@ make
 - Files to turn in : Makefile, main.cpp, MutantStack.{h, hpp} and optional file: MutantStack.tpp
 - Forbidden functions : None
 ## Detail
+- 이제, 더 심각한 걸 해볼 시간이야. 이상한 걸 만들어보자!
+- 컨테이너의 std::stack 은 매우 멋져. 불행하게도, STL Containers 의 std::stack은 반복자가 없어... 아주 아쉬워...
+- 그러나 이걸 우리가 그냥 내버려 둘까? 원래 스택을 도살하여 누락된 기능을 만들 수 있는 자유를 가지고 있는데도!
+- 정의를 바로 잡으려면 std::stack 을 반복 가능하게 만들어야 한다.
+- MutantStack class 를 만들어라. 이는 모든 std::stack의 기능을 제공하고, 이 클래스만 반복자를 제공할 것입니다.
+- 예는 다음과 같다.
+```
+int main()
+{
+	MutantStack<int> mstack;
+
+	mstack.push(5);
+	mstack.push(17);
+
+	std::cout << mstack.top() << std::endl;
+
+	mstack.pop();
+
+	std::cout << mstack.size() << std::endl;
+
+	mstack.push(3);
+	mstack.push(5);
+	mstack.push(737);
+	//[...]
+	mstack.push(0);
+
+	MutantStack<int>::iterator it = mstack.begin();
+	MutantStack<int>::iterator ite = mstack.end();
+
+	++it;
+	--it;
+	while (it != ite)
+	{
+		std::cout << *it << std::endl;
+		++it;
+	}
+	std::stack<int> s(mstack);
+	return 0;
+}
+```
+- 만약 처음 당신의 MutantStack을 실험해봤다면 이를 std::list로도 실험해봐라. 그것도 완전히 같은 결과를 가질 것이다. 물론 다른 컨테이너도 말이다! push() 가 push_back() 이 될 수도 있으니 공식 레퍼런스를 참고해라!
 <bt> </bt>

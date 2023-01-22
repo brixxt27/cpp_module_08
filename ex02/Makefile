@@ -1,8 +1,8 @@
-NAME	=	start_with_a_few_functions
+NAME	=	mutated_abomination
 
 SRCS	=	main.cpp
 
 INCS	=	\
-			whatever.h
+			MutantStack.h
 
 include ../template.mk
