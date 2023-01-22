@@ -1,5 +1,5 @@
 # cpp_module_08
-### 이슈 관리: [전체 이슈 list](https://github.com/brixxt27/cpp_module_08.git)
+### 이슈 관리: [전체 이슈 list](https://github.com/brixxt27/cpp_module_08/issues/1)
 # Module-specific rules
 - 지금까지는 컨테이너와 알고리즘을 사요하면 안 됐지만 이번 과제에서는 이를 사용하지 않으면 점수를 받지 못할 것이다.
 
