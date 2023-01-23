@@ -34,7 +34,7 @@ int main()
 	for (MutantStack<int>::reverse_iterator rit = mstack.rbegin(); rit != mstack.rend(); rit++) {
 		std::cout << *rit << std::endl;
 	}
-	std::cout << "---------copy operator and reverse iterator MutantStack test-------------" << std::endl;
+	std::cout << "---------copy constructor and reverse iterator MutantStack test-------------" << std::endl;
 	MutantStack<int> s(mstack);
 
 	for (MutantStack<int>::reverse_iterator rit = s.rbegin(); rit != s.rend(); rit++) {
@@ -68,6 +68,14 @@ int main()
 	{
 		std::cout << *list_it << std::endl;
 		++list_it;
+	}
+	std::cout << "---------copy assignment operator and reverse iterator MutantStack test-------------" << std::endl;
+	MutantStack<int> dest;
+
+	dest = mstack;
+
+	for (MutantStack<int>::reverse_iterator rit = dest.rbegin(); rit != dest.rend(); rit++) {
+		std::cout << *rit << std::endl;
 	}
 	return 0;
 }
