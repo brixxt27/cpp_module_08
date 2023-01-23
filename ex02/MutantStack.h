@@ -38,8 +38,9 @@ MutantStack<T>&	MutantStack<T>::operator=(const MutantStack& rhs)
 {
 	if (this == &rhs)
 		return *this;
-		
-	this->c = rhs.c;
+
+	//this->c = rhs.c;
+	MutantStack<T>::c = rhs.c;
 	return *this;
 }
 
