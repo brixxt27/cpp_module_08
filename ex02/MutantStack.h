@@ -48,6 +48,7 @@ MutantStack<T>&	MutantStack<T>::operator=(const MutantStack& rhs)
 
 	/**
 	 * 아래 세 개 모두 복사가 가능하다.
+	 * 원본의 내용을 전부 지운 뒤 복사한다.
 	 */
 
 	//this->c = rhs.c;
